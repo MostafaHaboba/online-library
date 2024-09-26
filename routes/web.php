@@ -20,6 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 // Admin routes (prefix 'admin', protected by 'admin' middleware)
 Route::middleware(['auth','admin'])->name('admin.')->group(function () {
 
