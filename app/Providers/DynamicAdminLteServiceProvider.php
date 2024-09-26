@@ -27,7 +27,7 @@ class DynamicAdminLteServiceProvider extends ServiceProvider
                 if (Auth::user()->role === 'admin') {
                     config(['adminlte.dashboard_url' => 'dashboard']);
                 } elseif (Auth::user()->role === 'student') {
-                    config(['adminlte.dashboard_url' => 'student/dashboard']);
+                    config(['adminlte.dashboard_url' => 'stu/dashboard']);
                 }
             }
         });

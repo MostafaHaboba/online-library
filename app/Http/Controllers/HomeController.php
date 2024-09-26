@@ -25,6 +25,7 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
     public function notadmin()
     {
         return view('notadmin');

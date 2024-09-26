@@ -124,7 +124,7 @@ class DynamicMenuServiceProvider extends ServiceProvider
                         // Dashboard Link
                         [
                             'text' => 'Dashboard',
-                            'url'  => 'student/dashboard',
+                            'url'  => 'stu/dashboard',
                             'icon' => 'fas fa-tachometer-alt', // Dashboard Icon
                             'label_color' => 'success',
                         ],
@@ -132,7 +132,7 @@ class DynamicMenuServiceProvider extends ServiceProvider
                         // Books Link
                         [
                             'text' => 'Books',
-                            'url'  => 'student/books',
+                            'url'  => 'stu/books',
                             'icon' => 'fas fa-book-open', // Books icon
                             'label_color' => 'success',
                         ],
@@ -144,12 +144,12 @@ class DynamicMenuServiceProvider extends ServiceProvider
                             'submenu' => [
                                 [
                                     'text' => 'Show Profile',
-                                    'url'  => 'student/profile/view',
+                                    'url'  => 'stu/profile/view',
                                     'icon' => 'fas fa-id-badge', // View profile icon
                                 ],
                                 [
                                     'text' => 'Edit Profile',
-                                    'url'  => 'student/profile',
+                                    'url'  => 'stu/profile',
                                     'icon' => 'fas fa-edit', // Edit profile icon
                                 ],
                             ],

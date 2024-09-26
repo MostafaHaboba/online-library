@@ -79,8 +79,8 @@ class BorrowedBookController extends Controller
     return redirect()->route('student.dashboard')->with('success', 'Book returned successfully!');
 }
 
-// public function RedirectToDashboard(){
-//     return redirect('/student/dashboard');
-// }
+public function RedirectToDashboard(){
+    return redirect('/stu/dashboard');
+}
 
 }
