@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="container">
-    <h1>Admin Dashboard Update</h1>
+    <h1>Admin Dashboard</h1>
 
     <div class="row mt-4">
         <!-- First Row -->
