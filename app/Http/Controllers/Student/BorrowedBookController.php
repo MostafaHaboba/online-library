@@ -80,7 +80,7 @@ class BorrowedBookController extends Controller
 }
 
 public function RedirectToDashboard(){
-    return redirect('/stu/dashboard');
+    return redirect()->route('student.dashboard');
 }
 
 }

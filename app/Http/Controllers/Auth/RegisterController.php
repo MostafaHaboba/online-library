@@ -29,7 +29,8 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/stu/dashboard';
+    protected $redirectTo = route('student.dashboard');
+
    
 
     /**

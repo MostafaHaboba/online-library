@@ -25,11 +25,11 @@ class DynamicAdminLteServiceProvider extends ServiceProvider
             if (Auth::check()) {
                 // Set dashboard URL based on user role
                 if (Auth::user()->role === 'admin') {
-                    config(['adminlte.dashboard_url' => 'dashboard']);
+                    config(['adminlte.dashboard_url' => route('admin.dashboard')]);
                 } elseif (Auth::user()->role === 'student') {
-                    config(['adminlte.dashboard_url' => 'stu/dashboard']);
+                    config(['adminlte.dashboard_url' => route('student.dashboard')]);
                 }
-            }
+            }            
         });
     }
 }
