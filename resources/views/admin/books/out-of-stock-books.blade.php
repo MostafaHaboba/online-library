@@ -18,6 +18,7 @@
                         <th>Author</th>
                         <th>Created At</th>
                         <th>Updated At</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -28,6 +29,9 @@
                             <td>{{ $book->author }}</td>
                             <td>{{ $book->created_at->format('Y-m-d') }}</td>
                             <td>{{ $book->updated_at->format('Y-m-d') }}</td>
+                            <td>
+                                <a href="{{ route('admin.books.edit', $book->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>

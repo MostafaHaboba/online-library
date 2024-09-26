@@ -30,7 +30,8 @@ class AdminController extends Controller
         // Count recently added books (e.g., added in the last 30 days)
         $recentlyAddedBooksCount = Book::where('created_at', '>=', Carbon::now()->subDays(30))->count();
 
-        $outOfStockBooksCount = Book::where('quantity', Null)->count();
+        $outOfStockBooksCount = Book::where('quantity', 0)
+        ->orWhereNull('quantity')->count();
 
         // Pass the data to the view
         return view('admin.dashboard', compact(
@@ -68,8 +69,10 @@ class AdminController extends Controller
 
     public function OutOfStockBooks()
     {
-        // Fetch all books where the quantity is zero
-        $outOfStockBooks = Book::where('quantity', Null)->get();
+    // Fetch all books where the quantity is either zero or null
+    $outOfStockBooks = Book::where('quantity', 0)
+                           ->orWhereNull('quantity')
+                           ->get();
 
         // Return the view with the out-of-stock books data
         return view('admin.books.out-of-stock-books', compact('outOfStockBooks'));
