@@ -47,8 +47,6 @@ Route::middleware(['auth','admin'])->name('admin.')->group(function () {
 });
 
 
-
-
 // Student routes (protected by 'auth' middleware)
  
 Route::middleware(['auth', 'student'])->prefix('stu')->name('student.')->group(function () {
