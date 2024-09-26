@@ -13,7 +13,7 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        {{-- <th>ID</th> --}}
                         <th>Title</th>
                         <th>Author</th>
                         <th>Created At</th>
@@ -24,7 +24,7 @@
                 <tbody>
                     @foreach ($outOfStockBooks as $book)
                         <tr>
-                            <td>{{ $book->id }}</td>
+                            {{-- <td>{{ $book->id }}</td> --}}
                             <td>{{ $book->title }}</td>
                             <td>{{ $book->author }}</td>
                             <td>{{ $book->created_at->format('Y-m-d') }}</td>
