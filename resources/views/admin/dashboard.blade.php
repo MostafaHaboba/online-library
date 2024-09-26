@@ -1,5 +1,5 @@
 @extends('adminlte::page')
-@section('title', 'Admin Dashboard - Online Library')
+@section('title', 'Admin Dashboard - Online Library ')
 
 @section('content')
 <div class="container">
