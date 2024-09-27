@@ -1,3 +1,6 @@
-You are <h1>not Admin</h1> to access this page
-<br> 
-you are Only Student
+@extends('adminlte::page')
+@section('title', 'Online Library')
+
+@section('content')
+<h1>You are Not Admin to access this page</h1>
+@endsection
