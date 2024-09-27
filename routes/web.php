@@ -36,9 +36,9 @@ Route::middleware(['auth','admin'])->name('admin.')->group(function () {
     // User management (search students by ID, view student details)
     route::get('students', [UserController::class, 'index'])->name('students.index');
 
-    Route::get('student/search', [UserController::class, 'searchForm'])->name('students.searchForm');
-    Route::get('student/search_action', [UserController::class, 'search'])->name('students.search');
-    Route::get('student/{id}', [UserController::class, 'show'])->name('students.show');
+    Route::get('students/search', [UserController::class, 'searchForm'])->name('students.searchForm');
+    Route::get('students/search_action', [UserController::class, 'search'])->name('students.search');
+    Route::get('students/{id}', [UserController::class, 'show'])->name('students.show');
 
     // Admin profile management
     Route::get('profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -50,7 +50,7 @@ Route::middleware(['auth','admin'])->name('admin.')->group(function () {
 
 // Student routes (protected by 'auth' middleware)
  
-Route::middleware(['auth', 'student'])->prefix('stu')->name('student.')->group(function () {
+Route::middleware(['auth', 'student'])->prefix('student')->name('student.')->group(function () {
 
     // Student dashboard (View borrowed books and return dates)
     Route::get('/dashboard', [StuBorrowedBookController::class, 'studentDashboard'])->name('dashboard');
