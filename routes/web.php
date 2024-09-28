@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 
-// Admin routes (prefix 'admin', protected by 'admin' middleware)
+// Admin routes
 Route::middleware(['auth','admin'])->name('admin.')->group(function () {
 
     // Admin dashboard (View borrowed books, all books, and all users)
@@ -48,8 +48,7 @@ Route::middleware(['auth','admin'])->name('admin.')->group(function () {
 });
 
 
-// Student routes (protected by 'auth' middleware)
- 
+// Student routes
 Route::middleware(['auth', 'student'])->prefix('student')->name('student.')->group(function () {
 
     // Student dashboard (View borrowed books and return dates)
